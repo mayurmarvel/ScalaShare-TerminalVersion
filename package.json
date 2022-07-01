@@ -1,0 +1,23 @@
+{
+  "name": "scalashare_terminal_version",
+  "version": "1.0.0",
+  "description": "Instantly upload files to IPFS  via Terminal / Commandline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon node index.js"
+  },
+  "keywords": [
+    "scalashare",
+    "ipfs-share",
+    "scala"
+  ],
+  "author": "Mayur",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "form-data": "^4.0.0",
+    "formidable": "^2.0.1"
+  }
+}
