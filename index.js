@@ -34,17 +34,6 @@ const errorMessage = `
 'Max File Size is 100 MB, Don't Upload more than one File'
 `
 
-app.get('/upload', (req, res) => {
-    res.send(`
-    <h2>With <code>"express"</code> npm package</h2>
-    <form action="/" enctype="multipart/form-data" method="post">
-      <div>Text field title: <input type="text" name="title" /></div>
-      <div>File: <input type="file" name="someExpressFiles" multiple="multiple" /></div>
-      <input type="submit" value="Upload" />
-    </form>
-  `);
-});
-
 
 // 
 
@@ -60,7 +49,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res, next) => {
 
     const options = {
-        uploadDir: './uploads', maxFileSize: 104857600, maxFields: 1, keepExtensions: true
+        uploadDir: './uploads', maxFileSize: 100000000, maxFields: 1, keepExtensions: true
     }
 
     const form = formidable(options);
