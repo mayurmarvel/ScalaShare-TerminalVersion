@@ -31,7 +31,7 @@ const errorMessage = `
 ██▄ █▀▄ █▀▄ █▄█ █▀▄
 
 'Error uploading your file TRY AGAIN or upload ANOTHER File!'
-'Max File Size is 100 MB, Don't Upload more than one File'
+'Max File Size is 250 MB, Don't Upload more than one File'
 `
 
 
@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res, next) => {
 
     const options = {
-        uploadDir: './uploads', maxFileSize: 100000000, maxFields: 1, keepExtensions: true
+        uploadDir: './uploads', maxFileSize: 250000000, maxFields: 1, keepExtensions: true
     }
 
     const form = formidable(options);
